@@ -28,6 +28,6 @@ export default Mixin.create({
       applyStyle = isFocusable;
     }
 
-    return htmlSafe(applyStyle ? 'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;' : '');
+    return htmlSafe(applyStyle ? 'touch-action: manipulation; -ms-touch-action: manipulation;' : '');
   })
 });
