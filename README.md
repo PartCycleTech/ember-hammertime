@@ -39,16 +39,13 @@ being present on an element.
 For most things, you'll want the following `style` attribute to be present on the component or element.
 
 ```html
-<div style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;">
+<div style="touch-action: manipulation; -ms-touch-action: manipulation;">
 ```
-
-`cursor: pointer;` is required because of [bugs in Safari 9.3's](https://github.com/emberjs/ember.js/issues/13171#issuecomment-200521638) 
-partial handling of touch-action, but is also recommended CSS for all mobile browsers.
 
 The AST Walker automatically adds this style to elements when any of the following rules is matched.
 
 - The element's tagName is `select`, `button`, `a`, or `textarea`.
-- The element's tagName is `input` and the element's `type` is `button`, `submit`, `text`, or `file`. 
+- The element's tagName is `input` and the element's `type` is `button`, `submit`, `text`, or `file`.
 - The element has an action defined on it (e.g. `<div {{action "foo"}}>`)
 
 All `link-components` (e.g. `{{link-to}}` as well as components with attributes matching the rules utilized
@@ -76,25 +73,25 @@ It is heavily recommended to add the following rule to your site's CSS
  - PR against `develop` (default branch).
 
 
-### Commmits 
+### Commmits
 
 Angular Style commit messages have the full form:
- 
+
  ```
  <type>(<scope>): <title>
- 
+
  <body>
- 
+
  <footer>
  ```
- 
+
  But the abbreviated form (below) is acceptable and often preferred.
- 
+
  ```
  <type>(<scope>): <title>
  ```
- 
+
  Examples:
- 
+
  - chore(deps): bump deps in package.json and bower.json
  - docs(component): document the `fast-action` component

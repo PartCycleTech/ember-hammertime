@@ -8,10 +8,10 @@
  include
 
  ```handlebars
- <HTMLElement {{action "foo"}} style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;">
+ <HTMLElement {{action "foo"}} style="touch-action: manipulation; -ms-touch-action: manipulation;">
  ```
  */
-var TOUCH_ACTION = 'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;';
+var TOUCH_ACTION = 'touch-action: manipulation; -ms-touch-action: manipulation;';
 
 function TouchActionSupport() {
   this.syntax = null;
